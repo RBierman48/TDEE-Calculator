@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:text="TDEE Calculator"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeader"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="312dp"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/rgGender"
+        android:layout_marginTop="0dp"
+        android:hint="Age"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/etAge"
+        android:layout_marginTop="-9dp"
+        android:hint="Height (in)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/etHeight"
+        android:layout_marginTop="-5dp"
+        android:hint="Weight (lb)"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/rgActivityLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etWeight"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbSedentary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sedentary" />
+
+        <RadioButton
+            android:id="@+id/rbLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light Exercise (1-2 days/week)" />
+
+        <RadioButton
+            android:id="@+id/rbModerate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moderate Exercise (3-5 days/week)" />
+
+        <RadioButton
+            android:id="@+id/rbHeavy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heavy Exercise (6-7 days/week)" />
+
+        <RadioButton
+            android:id="@+id/rbAthlete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Athlete (2x per day)" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgActivityLevel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="304dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/btnCalculate"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="36dp"
+        android:paddingTop="16dp"
+        android:textAlignment="textStart"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

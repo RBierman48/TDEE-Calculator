@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultsActivity">
+
+    <TextView
+        android:id="@+id/tvHeader2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="160dp"
+        android:text="RESULTS"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgFitnessGoal"
+        android:layout_width="380dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="224dp"
+        android:checkedButton="@id/rbMaintain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbGain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gain Weight" />
+
+        <RadioButton
+            android:id="@+id/rbMaintain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maintain Weight" />
+
+        <RadioButton
+            android:id="@+id/rbLose"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Lose Weight" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvResults"
+        android:layout_width="404dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="174dp"
+        android:text="Your TDEE is:      calories per day"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rgFitnessGoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader2" />
+
+    <TextView
+        android:id="@+id/tvFitnessGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="316dp"
+        android:layout_marginBottom="36dp"
+        android:text="Fitness Goal"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rgFitnessGoal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResults" />
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="105dp"
+        android:text="Return Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
